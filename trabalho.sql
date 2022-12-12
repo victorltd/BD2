@@ -339,3 +339,43 @@ Funções Numéricas
 	GROUP BY
 	HAVING
 Subconsulta
+
+/*insercao no banco de sangue*/
+
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('Hemocentro Regional Garanhuns','Rua Gonçalves Maia, s/n','Garanhuns','Pernambuco',8737618520,'Gabrielly Allana Nascimento',4229807194);
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('Hemocentro Regional Palmares','Hospital Regional dos Palmares - Engenho Quilombo dos Palmares BR 101 - Km 185','Palmares','Pernambuco',8194885974,'Sarah Melissa Santos',87992834685);
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('Núcleo de Hemoterapia Regional Salgueiro','Rua Joaquim Gondim, 65','Salgueiro','Pernambuco',8738716569,'Sarah Mirella Elaine Vieira',87985542009);
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('Hemocentro Regional Barreiras ','Rua Paulo Afonso, s/n','Barreiras','Bahia',7736133799,'Kevin Manoel Fernandes',77987487289);
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('UCT Hemoba - Camaçari','Avenida Jorge Amado, s/n','Camaçari','Bahia',7136444252,'Sebastião Isaac Noah Silveira',71982596161);
+insert into bancoSangue(nomeBanco, rua, cidade, estado, telefone, nomeGerente, telefoneGerente) values ('UCT Hemoba - Feira de Santana',' Avenida Presidente Dutra, s/n','Feira de Santana','Bahia',7536141556,'Gabriel Isaac Martins',71985511572);
+
+
+"insert into doador(cpfDoardor, nomeDoador, tipoSanguiDoador,rh,dataDoacao,sexo,idade,rua,
+ numero,cidade,estado,idBanco) 
+ values("
+
+/*ALTER TABLE*/
+/*ADD*/
+Alter table paciente ADD sexo varchar(2) NULL;
+Alter table paciente add doencaPac varchar(20) null;
+
+/*rename*/
+ALTER TABLE bancoSangue
+  RENAME TO bancodeSangue;
+
+  ALTER TABLE paciente
+  RENAME TO pacientes;
+
+/*rename column*/
+ALTER TABLE doador 
+RENAME COLUMN rh TO rhDoador;
+
+ALTER TABLE sangue 
+RENAME COLUMN rh TO rhSangue;
+
+/*max/min*/
+select max(datadoacao) from sangue;
+
+select min(idade) from doador;
+
+
